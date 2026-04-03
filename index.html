@@ -1,30 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset='UTF-8'>
-  <title>Poultry Litter 3D Plots</title>
+  <meta charset="UTF-8">
+  <title>Poultry Litter Spatial Analysis</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+
+    header {
+      background-color: #1f3b4d;
+      color: white;
+      padding: 20px 40px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .container {
+      padding: 30px 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+      color: #1f3b4d;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      transition: 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #1f3b4d;
+      font-weight: bold;
+      display: block;
+    }
+
+    .card span {
+      display: block;
+      font-size: 13px;
+      color: #666;
+      margin-top: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: #888;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Poultry Litter 3D Plots by Pen</h1>
-  <h2>Microbial</h2>
-  <ul>
-    <li><a href='mac_p1.html'>MAC - P1</a></li>
-    <li><a href='mac_p2.html'>MAC - P2</a></li>
-    <li><a href='mrs_p1.html'>MRS - P1</a></li>
-    <li><a href='mrs_p2.html'>MRS - P2</a></li>
-    <li><a href='tsa_p1.html'>TSA - P1</a></li>
-    <li><a href='tsa_p2.html'>TSA - P2</a></li>
-  </ul>
-  <h2>Chemical</h2>
-  <ul>
-    <li><a href='tkn_p1.html'>TKN - P1</a></li>
-    <li><a href='tkn_p2.html'>TKN - P2</a></li>
-    <li><a href='p_p1.html'>P - P1</a></li>
-    <li><a href='p_p2.html'>P - P2</a></li>
-    <li><a href='k_p1.html'>K - P1</a></li>
-    <li><a href='k_p2.html'>K - P2</a></li>
-    <li><a href='s_p1.html'>S - P1</a></li>
-    <li><a href='s_p2.html'>S - P2</a></li>
-  </ul>
+
+<header>
+  <h1>Poultry Litter Spatial Analysis</h1>
+  <p>Interactive 3D visualization of microbial and chemical distributions across pen environments</p>
+</header>
+
+<div class="container">
+
+  <!-- OVERLAY -->
+  <div class="section">
+    <h2>Overlay Viewers (Scaled Comparison)</h2>
+    <div class="grid">
+      <div class="card">
+        <a href="pen1_overlay.html">Pen 1 Overlay Viewer</a>
+        <span>Compare all variables (scaled)</span>
+      </div>
+      <div class="card">
+        <a href="pen2_overlay.html">Pen 2 Overlay Viewer</a>
+        <span>Compare all variables (scaled)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MICROBIAL -->
+  <div class="section">
+    <h2>Microbial Analysis (Log10 CFU)</h2>
+    <div class="grid">
+      <div class="card"><a href="mac_p1.html">MAC – Pen 1</a><span>Enterobacteriaceae</span></div>
+      <div class="card"><a href="mac_p2.html">MAC – Pen 2</a><span>Enterobacteriaceae</span></div>
+
+      <div class="card"><a href="mrs_p1.html">MRS – Pen 1</a><span>Lactic Acid Bacteria</span></div>
+      <div class="card"><a href="mrs_p2.html">MRS – Pen 2</a><span>Lactic Acid Bacteria</span></div>
+
+      <div class="card"><a href="tsa_p1.html">TSA – Pen 1</a><span>Total Aerobic Bacteria</span></div>
+      <div class="card"><a href="tsa_p2.html">TSA – Pen 2</a><span>Total Aerobic Bacteria</span></div>
+    </div>
+  </div>
+
+  <!-- CHEMICAL -->
+  <div class="section">
+    <h2>Chemical Analysis (%)</h2>
+    <div class="grid">
+      <div class="card"><a href="tkn_p1.html">Nitrogen (TKN) – Pen 1</a></div>
+      <div class="card"><a href="tkn_p2.html">Nitrogen (TKN) – Pen 2</a></div>
+
+      <div class="card"><a href="p_p1.html">Phosphorus – Pen 1</a></div>
+      <div class="card"><a href="p_p2.html">Phosphorus – Pen 2</a></div>
+
+      <div class="card"><a href="k_p1.html">Potassium – Pen 1</a></div>
+      <div class="card"><a href="k_p2.html">Potassium – Pen 2</a></div>
+
+      <div class="card"><a href="s_p1.html">Sulfur – Pen 1</a></div>
+      <div class="card"><a href="s_p2.html">Sulfur – Pen 2</a></div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Spatial mapping developed for poultry litter analysis | UW–Madison
+</footer>
+
 </body>
 </html>
